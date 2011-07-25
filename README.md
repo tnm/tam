@@ -72,7 +72,7 @@ db.get("Jessica")
 
 We can also delete the key and its value
 
-``scala
+```scala
 db.delete("Jessica")
 ```
 
