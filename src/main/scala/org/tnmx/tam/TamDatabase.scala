@@ -4,18 +4,27 @@ import com.sleepycat.je._
 import com.codahale.logula.Logging
 
 object TamDatabase {
+  /**
+   * Opens a BDB database with a given name and file path
+   *
+   * @param dbName   the name of this database
+   * @param dbPath   the path to this database
+   */
   def open(dbName: String = "default",
            dbPath: String = "default"): TamDatabase = {
     new TamDatabase(dbName, dbPath)
   }
 }
 
+/**
+ * A class representing actions against a BDB database.
+ */
 class TamDatabase(dbName: String , dbPath: String) {
   private val tam = new TamInterface(dbPath, dbName)
 
   /**
-   * At a key of type A, serialize and put a Scala object into
-   * BDB as JSON
+   * Serializes a Scala object of type A into JSON, and inserts it into
+   * a BDB database at the key specified by `key`.
    *
    * @param key    the key for this object
    * @param value  the value for this object
@@ -25,7 +34,7 @@ class TamDatabase(dbName: String , dbPath: String) {
   }
 
   /**
-   * Get the JSON value of a given key
+   * Returns the JSON string value of the key specified by `key.
    *
    * @param key   the key for this object
    * @return      the value of this key
@@ -38,6 +47,9 @@ class TamDatabase(dbName: String , dbPath: String) {
     }
   }
 
+  /**
+   * Closes the database and environement for this BDB database
+   */
   def close() {
     tam.close()
   }
