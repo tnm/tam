@@ -49,8 +49,8 @@ First, import:
 import org.tnmx.tam._
 ```
 
-Now, open a database. We'll give this one a name `people_db`, with a path of `db/people_db`. `open`
-will return a TamDatabase object.
+Now, open a database. We'll give this one a name `people_db`, with a path of `db/people_db`.
+`TamDatabase.open()` will return a `TamDatabase` object.
 
 ```scala
 val db = TamDatabase.open("people_db", "db/people_db")
