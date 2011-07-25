@@ -67,7 +67,6 @@ Get the object back. **tam** will return to you the JSON as a string.
 
 ```scala
 db.get("Jessica")
-
 >> """{"name":"Jessica","location":"San Francisco"}"""
 ```
 
