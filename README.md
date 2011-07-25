@@ -20,7 +20,7 @@ If you're using Maven, place the following in your `pom.xml`:
 <repositories>
   <repository>
     <id>repo.tnmx.org</id>
-    <url>http://repo.tnmx.org/url>
+    <url>http://repo.tnmx.org</url>
   </repository>
 </repositories>
 
@@ -67,7 +67,7 @@ Get the object back. **tam** will return to you the JSON as a string.
 
 ```scala
     db.get("Jessica")
-    >> {"name":"Jessica","location":"San Francisco"}
+    >> """{"name":"Jessica","location":"San Francisco"}"""
 ```
 When we're done, close our database and its environment.
 

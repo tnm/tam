@@ -10,4 +10,4 @@ project/plugins/target
 out
 logs
 project/plugins/project/build.properties
-
+db/
