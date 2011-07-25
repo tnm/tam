@@ -67,7 +67,8 @@ Get the object back. **tam** will return to you the JSON as a string.
 
 ```scala
 db.get("Jessica")
-    >> """{"name":"Jessica","location":"San Francisco"}"""
+
+>> """{"name":"Jessica","location":"San Francisco"}"""
 ```
 
 We can also delete the key and its value
@@ -79,7 +80,7 @@ db.delete("Jessica")
 When we're done, close our database and its environment.
 
 ```scala
-    db.close()
+db.close()
 ```
 
 license
