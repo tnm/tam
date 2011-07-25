@@ -7,9 +7,9 @@ overview
 ----------
 
 **tam** is a straight-forward Scala interface to Berkeley Database Java Edition
-that uses jerkson to automatically serialize your Scala objects into JSON before storing
-them. **tam** exposes `put`, `get`, and `delete` methods to BDB, abstracting the various
-configuration and environment settings of the Java API.
+that uses [jerkson](https://github.com/codahale/jerkson) to automatically serialize your Scala objects
+into JSON before storing them. **tam** exposes `put`, `get`, and `delete` methods to BDB, abstracting
+the various configuration and environment settings of the Java API.
 
 setup
 -----------
