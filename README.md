@@ -53,22 +53,29 @@ Now, open a database. We'll give this one a name `people_db`, with a path of `db
 will return a TamDatabase object.
 
 ```scala
-    val db = TamDatabase.open("people_db", "db/people_db")
+val db = TamDatabase.open("people_db", "db/people_db")
 ```
 
 Take a Scala object and store it as JSON with a key name of `Jessica`:
 
 ```scala
-    val jessicaObject = Map("name" -> "Jessica", "location" -> "San Francisco")
-    db.put("Jessica", jessicaObject)
+val jessicaObject = Map("name" -> "Jessica", "location" -> "San Francisco")
+db.put("Jessica", jessicaObject)
 ```
 
 Get the object back. **tam** will return to you the JSON as a string.
 
 ```scala
-    db.get("Jessica")
+db.get("Jessica")
     >> """{"name":"Jessica","location":"San Francisco"}"""
 ```
+
+We can also delete the key and its value
+
+``scala
+db.delete("Jessica")
+```
+
 When we're done, close our database and its environment.
 
 ```scala
