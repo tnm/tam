@@ -1,4 +1,4 @@
-name         := "trident"
+name         := "tam"
 
 version      := "0.1.0"
 
